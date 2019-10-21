@@ -1,12 +1,6 @@
 import numpy as np
-from sklearn import datasets
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
-
-# Loading dataset Iris
-iris = datasets.load_iris()
-iris_X = iris.data
-iris_Y = iris.target
+from sklearn.neighbors import KNeighborsClassifier
 
 dataTrain = [[7.4, 2.8, 6.1, 1.9],
              [7.9, 3.8, 6.4, 2],
@@ -37,8 +31,6 @@ arrayTargetTest = np.array(targetTest)
 
 # print(arrayData)
 # print(arrayTarget)
-# print("iris data",iris_X)
-# print("targets",iris_Y)
 
 np.random.seed(0)
 indices = np.random.permutation(len(arrayDataTrain))
